@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Image Repository</title>
+    </head>
+
+    <body>
+        <a href="/">Main page</a> <br>
+
+
+        <table border = 1>
+            <thead>
+                <td>Name</td>
+                <td>Image</td>
+                <td></td>
+            </thead>
+            
+            {% for product in products %}
+                <tr>
+                <td>{{product["name"]}}</td>
+                <td><img src='{{product["src"]}}' /></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

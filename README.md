@@ -2,6 +2,7 @@
 
 
 usage:
+
     initialize by running server.py
 
     open a web browser at the address : http://127.0.0.1:5000

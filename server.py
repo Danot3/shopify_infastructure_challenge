@@ -9,11 +9,10 @@ def get_cursor():
     return (cur, conn)
 
 
-
 def initialize_db():
     (cur, conn) = get_cursor()
 
-    # Create products table with sample data
+    # Create products table with data
     cur.execute("DROP TABLE IF EXISTS products")
     cur.execute("CREATE TABLE products (name TEXT, imgpath TEXT)")
     cur.execute("""INSERT INTO products (name, imgpath) VALUES \
@@ -21,8 +20,6 @@ def initialize_db():
         ('Black Tee Shirt', 'images/black_tee_shirt.jpg'), \
         ('Black Jeans', 'images/black_jeans.jpg'), \
         ('White Sneakers', 'images/white_sneakers.jpg')""")
-
-    
     conn.commit()
     
 
@@ -42,7 +39,6 @@ def home_page():
             "name":  row[1],
             "src":   "/static/%s" % (row[2]),
         })
-
     return render_template("index.html", products=products)
  
 if __name__ == '__main__':

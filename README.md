@@ -15,7 +15,9 @@ Description:
     image repository for any images
 
 Feature to add:
+
     add ability to buy items
+    
     add and delete images from repo
 
 
